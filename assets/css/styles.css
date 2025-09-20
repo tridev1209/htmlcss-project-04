@@ -530,3 +530,105 @@ input textarea select button {
     background: #ff5d31;
     border-radius: 1px;
 }
+/* Service */
+.service {
+    margin-top: 130px;
+    background: #fff6ed;
+    padding: 70px 0 100px;
+    z-index: -1;
+}
+.service__top {
+    text-align: center;
+}
+.service__desc {
+    color: #5e6085;
+    font-family: var(--heading-font);
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1; /* 100% */
+    margin-bottom: 15px;
+}
+.service__body {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+}
+
+.service-item {
+    padding: 30px 22px 30px 28px;
+
+    width: 294px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 188, 122, 0.26);
+    background: #fff;
+}
+.service-item + .service-item {
+    margin-top: 24px;
+}
+.service-item__heading {
+    position: relative;
+    color: #000958;
+    font-family: var(--heading-font);
+    padding-left: 12px;
+    font-size: 2.2rem;
+    font-weight: 600;
+    white-space: nowrap;
+    line-height: 1; /* 100% */
+}
+.service-item__heading::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    border-radius: 1px;
+    width: 2px;
+    height: 22px;
+    background: linear-gradient(90deg, #ff5b2e 0.39%, #ffa187 100.29%);
+}
+.service-item__desc {
+    margin-top: 18px;
+}
+.service-item__link {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 24px;
+    color: #34396a;
+    font-family: var(--heading-font);
+    font-size: 1.2rem;
+    line-height: 1; /* 100% */
+}
+.service-item__icon {
+    margin-left: 6px;
+}
+.service__img {
+    width: 447px;
+    height: 621px;
+    z-index: 1;
+}
+.service__media {
+    margin-top: 17px;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.service__media::after {
+    content: "";
+    margin: 0 auto;
+    position: absolute;
+    inset: auto 0 0 0;
+    width: 410px;
+    height: 350px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #9df1fb 0%, #73d0db 108.14%);
+}
+.service__btn {
+    margin-top: 45px;
+    min-width: 214px;
+    color: #ff5b2e;
+    border-color: #ff5b2e;
+    margin-left: 50%;
+    translate: -50% 0;
+}
