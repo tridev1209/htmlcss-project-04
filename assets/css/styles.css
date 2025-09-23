@@ -54,9 +54,9 @@ input textarea select button {
     opacity: 0.9;
 }
 .btn--primary {
-    background: var(--primary-color);
-    border: var(--primary-color);
-    color: #fff;
+    background: var(--primary-color) !important;
+    border: var(--primary-color) !important;
+    color: #fff !important;
 }
 .btn__icon {
     display: flex;
@@ -743,4 +743,135 @@ input textarea select button {
     color: #ff5b2e;
     font-size: 1.6rem;
     font-weight: 500;
+}
+/* Pricing */
+.pricing {
+    padding: 86px 0;
+    background: #fff6ed;
+}
+.pricing__heading {
+    text-align: center;
+}
+.pricing__desc {
+    width: 709px;
+    text-align: center;
+    margin: 24px auto 0;
+}
+.pricing__switch-wrap {
+    margin-top: 38px;
+    display: flex;
+    justify-content: center;
+}
+.pricing__inner {
+    position: relative;
+}
+.pricing__switch-label {
+    display: inline-flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+    min-width: 276px;
+    border-radius: 99px;
+    padding: 0 40px;
+    border: 1px solid #ff5b2e99;
+    user-select: none; /* nguoi dung khong boi den */
+}
+.pricing__switch-label::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 138px;
+    border-radius: inherit;
+    background: #ff5b2e;
+}
+.pricing__switch-value {
+    color: #fff;
+    font-size: 1.6rem;
+    z-index: 1;
+    font-weight: 500;
+    line-height: 1;
+}
+.pricing__switch-input:checked + .pricing__switch-label::before {
+    left: auto;
+    width: 131px;
+    right: 0;
+}
+.pricing__switch-input:not(:checked) + .pricing__switch-label .pricing__switch-value:nth-of-type(2) {
+    color: #ff5b2e;
+}
+.pricing__switch-input:checked + .pricing__switch-label .pricing__switch-value:nth-of-type(1) {
+    color: #ff5b2e;
+}
+.pricing__decor {
+    position: absolute;
+    top: -10px;
+    right: -110px;
+}
+.pricing__list {
+    margin-top: 56px;
+    display: flex;
+    justify-content: center;
+    column-gap: 44px;
+}
+.pricing-item {
+    min-width: 302px;
+    padding: 30px 28px;
+    border-radius: 20px;
+    background: #fff;
+}
+.pricing-item__type {
+    color: #ff5b2e;
+    font-size: 1.2rem;
+    line-height: 1; /* 100% */
+}
+.pricing-item__heading {
+    margin-top: 8px;
+    color: #3f4065;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1; /* 100% */
+}
+.pricing-item__price {
+    margin: 24px 0;
+    color: #000958;
+    font-family: var(--heading-font);
+    font-size: 3.3rem;
+    font-weight: 700;
+    line-height: 1.03; /* 103.03% */
+}
+.pricing-item__btn {
+    --height: 44px;
+    width: 100%;
+    border: 1px solid rgba(255, 91, 46, 0.6);
+    color: #ff5b2e;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+.pricing-item__list {
+    margin-top: 24px;
+}
+.pricing-item__item {
+    position: relative;
+    padding-left: 26px;
+    display: flex;
+    color: #656689;
+    font-size: 1.4rem;
+    line-height: 1; /* 100% */
+}
+.pricing-item__item::before {
+    position: absolute;
+    content: "";
+    display: inline-flex;
+    top: 2px;
+    left: 3px;
+    width: 9px;
+    height: 5px;
+    background: transparent;
+    border-left: 1px solid #ff5b2e;
+    border-bottom: 1px solid #ff5b2e;
+    rotate: -45deg;
+}
+.pricing-item__item + .pricing-item__item {
+    margin-top: 18px;
 }
